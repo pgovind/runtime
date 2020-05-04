@@ -1144,7 +1144,7 @@ namespace System.Text
             return this;
         }
 
-        public StringBuilder Append(bool value) => Append(value.ToString());
+        public StringBuilder Append(bool value) => Append(value);
 
         public StringBuilder Append(char value)
         {
