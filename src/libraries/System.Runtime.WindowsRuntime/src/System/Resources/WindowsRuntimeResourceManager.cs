@@ -18,6 +18,8 @@ using Windows.ApplicationModel;
 using Windows.Foundation.Collections;
 using Windows.Storage;
 
+#pragma warning disable CA2249 // Consider using 'string.Contains' instead of 'string.IndexOf'
+
 namespace System.Resources
 {
 #if FEATURE_APPX

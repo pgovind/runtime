@@ -13,6 +13,8 @@ using System.Security;
 using System.Text;
 using System.Threading;
 
+#pragma warning disable CA2249 // Consider using 'string.Contains' instead of 'string.IndexOf'
+
 namespace System.ServiceProcess
 {
     /// This class represents an NT service. It allows you to connect to a running or stopped service

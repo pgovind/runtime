@@ -10,6 +10,8 @@ using System.Runtime.ConstrainedExecution;
 using System.Runtime.Versioning;
 using System.Text;
 
+#pragma warning disable CA2249 // Consider using 'string.Contains' instead of 'string.IndexOf'
+
 namespace System
 {
     internal static partial class SR

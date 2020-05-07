@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Reflection.Metadata;
 
+// #pragma warning disable CA2249 // Consider using 'string.Contains' instead of 'string.IndexOf'
+
 namespace System.Reflection.PortableExecutable
 {
     public sealed partial class DebugDirectoryBuilder

@@ -11,6 +11,8 @@ using System.Security;
 using System.Security.AccessControl;
 using System.Text;
 
+#pragma warning disable CA2249 // Consider using 'string.Contains' instead of 'string.IndexOf'
+
 namespace Microsoft.Win32
 {
     /// <summary>Registry encapsulation. To get an instance of a RegistryKey use the Registry class's static members then call OpenSubKey.</summary>

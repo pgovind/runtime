@@ -64,7 +64,7 @@ namespace System.Net.WebSockets
                 }
 
                 if (!char.IsLetterOrDigit(ch) &&
-                    Separators.IndexOf(ch) >= 0)
+                    Separators.Contains(ch))
                 {
                     invalidChar = ch.ToString();
                     break;

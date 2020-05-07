@@ -9,6 +9,8 @@ using System.Globalization;
 using System.Runtime.Versioning;
 using System.Text;
 
+#pragma warning disable CA2249 // Consider using 'string.Contains' instead of 'string.IndexOf'
+
 namespace System.Data.Common
 {
     internal partial class DbConnectionOptions
