@@ -6,6 +6,8 @@ using System.Globalization;
 using System.Runtime.InteropServices;
 using Internal.Runtime.CompilerServices;
 
+#pragma warning disable CA2249 // Consider using 'string.Contains' instead of 'string.IndexOf'
+
 namespace System
 {
     public partial class String

@@ -8,6 +8,8 @@ using System.Runtime.InteropServices;
 using System.Diagnostics;
 using System.Collections.Generic;
 
+#pragma warning disable CA1830 // Prefer strongly-typed StringBuilder overloads
+
 namespace System.Text
 {
     // This class represents a mutable string.  It is convenient for situations in
@@ -1144,7 +1146,7 @@ namespace System.Text
             return this;
         }
 
-        public StringBuilder Append(bool value) => Append(value);
+        public StringBuilder Append(bool value) => Append(value.ToString());
 
         public StringBuilder Append(char value)
         {
