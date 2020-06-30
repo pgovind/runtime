@@ -28,6 +28,7 @@ namespace System.Runtime.Intrinsics
         public static T GetElement<T>(this Vector128<T> vector, int index) where T : struct => throw new PlatformNotSupportedException();
         public static T ToScalar<T>(this Vector64<T> vector) where T : struct => throw new PlatformNotSupportedException();
         public static unsafe Vector128<ulong> CreateScalar(ulong value) => throw new PlatformNotSupportedException();
+        public static T ToScalar<T>(this Vector128<T> vector) where T : struct => throw new PlatformNotSupportedException();
     }
     internal readonly struct Vector128<T>
         where T : struct
