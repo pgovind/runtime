@@ -27,13 +27,13 @@ namespace System.Runtime.Intrinsics
         public static Vector128<ulong> AsUInt64<T>(this Vector128<T> vector) where T : struct => throw new PlatformNotSupportedException();
         public static T GetElement<T>(this Vector128<T> vector, int index) where T : struct => throw new PlatformNotSupportedException();
         public static T ToScalar<T>(this Vector64<T> vector) where T : struct => throw new PlatformNotSupportedException();
+        public static unsafe Vector128<ulong> CreateScalar(ulong value) => throw new PlatformNotSupportedException();
     }
     internal readonly struct Vector128<T>
         where T : struct
     {
         public static Vector128<T> Zero => throw new PlatformNotSupportedException();
         public static int Count => throw new PlatformNotSupportedException();
-        public static T ToScalar() => throw new PlatformNotSupportedException();
     }
 }
 
@@ -217,6 +217,8 @@ namespace System.Runtime.Intrinsics.Arm
             public static Vector128<uint> ZipLow(Vector128<uint> left, Vector128<uint> right) { throw new PlatformNotSupportedException(); }
 
             public static Vector128<ulong> ZipLow(Vector128<ulong> left, Vector128<ulong> right) { throw new PlatformNotSupportedException(); }
+
+            public static Vector64<byte> MaxAcross(Vector128<byte> value) { throw new PlatformNotSupportedException(); }
         }
 
         public static Vector64<byte> PopCount(Vector64<byte> value) => throw new PlatformNotSupportedException();
@@ -227,5 +229,6 @@ namespace System.Runtime.Intrinsics.Arm
 
         public static Vector128<ulong> DuplicateToVector128(ulong value) { throw new PlatformNotSupportedException(); }
 
+        public static unsafe Vector128<byte> LoadVector128(byte* address) { throw new PlatformNotSupportedException(); }
     }
 }
