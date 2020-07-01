@@ -19,6 +19,7 @@ namespace System.Runtime.Intrinsics
     {
         public static Vector128<short> Create(short value) => throw new PlatformNotSupportedException();
         public static Vector128<ushort> Create(ushort value) => throw new PlatformNotSupportedException();
+        public static unsafe Vector128<byte> Create(Vector64<byte> lower, Vector64<byte> upper) => throw new PlatformNotSupportedException();
         public static Vector128<ulong> CreateScalarUnsafe(ulong value) => throw new PlatformNotSupportedException();
         public static Vector128<byte> AsByte<T>(this Vector128<T> vector) where T : struct => throw new PlatformNotSupportedException();
         public static Vector128<short> AsInt16<T>(this Vector128<T> vector) where T : struct => throw new PlatformNotSupportedException();
