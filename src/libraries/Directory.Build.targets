@@ -219,6 +219,14 @@
   <Target Name="GetDocumentationFile"
           Returns="$(DocumentationFile)"/>
 
+  <Choose>
+    <When Condition="($(TargetFramework.StartsWith('netstandard1')) or '$(TargetFramework)' == 'netstandard2.0' or $(TargetFramework.StartsWith('netcoreapp2')) or '$(TargetFrameworkIdentifier)' == '.NETFramework')">
+      <PropertyGroup>
+        <DefineConstants>$(DefineConstants),USE_INTERNAL_ACCESSIBILITY</DefineConstants>
+      </PropertyGroup>
+    </When>
+  </Choose>
+
   <!-- Adds Nullable annotation attributes to netstandard <= 2.0 builds -->
   <Choose>
     <When Condition="'$(Nullable)' != '' and ($(TargetFramework.StartsWith('netstandard1')) or '$(TargetFramework)' == 'netstandard2.0' or $(TargetFramework.StartsWith('netcoreapp2')) or '$(TargetFrameworkIdentifier)' == '.NETFramework')">

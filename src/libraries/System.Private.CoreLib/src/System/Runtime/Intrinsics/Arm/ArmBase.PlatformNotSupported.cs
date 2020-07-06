@@ -11,7 +11,7 @@ namespace System.Runtime.Intrinsics.Arm
     /// This class provides access to the ARM base hardware instructions via intrinsics
     /// </summary>
     [CLSCompliant(false)]
-#if INTERNAL_NULLABLE_ATTRIBUTES
+#if USE_INTERNAL_ACCESSIBILITY
     internal
 #else
     public
